@@ -37,3 +37,23 @@
 #define BLANCO_BRILLANTE 0x00F
 
 #define NADA 0
+void PINTA_MATRIZ_MOVIMIENTOS() 
+{
+   for (int i = 0; i < FILAS_MAPA; ++i) {
+      for (int j = 0; j < COLUMNAS_MAPA; ++j) {
+         gotoxy2(j + LIMITE_DERECHO + 5, i + LIMITE_SUPERIOR);
+         
+         switch (matriz_movimientos[i][j]) {
+            case -1:
+               setCColor(0x007);
+               cout << "a";
+               setCColor(0x00E);
+               break;
+               
+            case DIRECCION_ARRIBA:
+               cout << "^";
+               break;
+            
+            case DIRECCION_ABAJO:
+               cout << "v";
+
