@@ -37,3 +37,49 @@
 #define BLANCO_BRILLANTE 0x00F
 
 #define NADA 0
+
+class PERSONAJE;
+class PACMAN;
+class FANTASMA;
+
+class PERSONAJE {
+   private:
+      int x, y;   // Coordenadas absolutas
+      int simbolo;
+      string nombre;
+      int direccion;
+ int color;
+      
+      int anteriorX, anteriorY;   // Coordenadas anteriores de x , y
+      
+   public:
+      PERSONAJE(int, int = 1, int = 1, int = 1);
+      void setX(int);
+      void setY(int);
+      void setSimbolo(int);
+      void setDireccion(int);
+      int getX();
+      int getY();
+      string getNombre();
+      void setNombre(string);
+      
+      int getColor();
+      void setColor(int);
+      
+      int getAnteriorX();
+      int getAnteriorY();
+      
+      int getXRelativoAlMapa();
+      int getYRelativoAlMapa();
+ int getAnteriorXRelativoAlMapa();   // Obtiene las coordenadas anteriores relativas al mapa
+      int getAnteriorYRelativoAlMapa();
+      
+      int getSimbolo();
+      int getDireccion();
+      virtual void mover(int);
+      virtual void pintar();
+      void borrar();
+      
+      int direccionVerdadera(int);
+      
+      bool esPosibleIrA(int posible_direccion);
