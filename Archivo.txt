@@ -1,0 +1,26 @@
+#include <vector>
+#include <windows.h>
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+// Simbolos o Caracteres
+#define CARACTER_FANTASMA 2
+
+// Movimiento con las teclas
+#define TECLA_ARRIBA       'i'
+#define TECLA_ABAJO        'k'
+#define TECLA_IZQUIERDA    'j'
+#define TECLA_DERECHA      'l'
+
+
+// Dirección de pacman
+#define DIRECCION_IZQUIERDA 0
+#define DIRECCION_DERECHA   1
+#define DIRECCION_ARRIBA    2
+#define DIRECCION_ABAJO     3
+#define DIRECCION_INVALIDA  -1
+
+
