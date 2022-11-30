@@ -57,3 +57,27 @@ void PINTA_MATRIZ_MOVIMIENTOS()
             case DIRECCION_ABAJO:
                cout << "v";
 
+break;
+               
+            case DIRECCION_IZQUIERDA:
+               cout << "<";
+               break;
+            
+            case DIRECCION_DERECHA:
+               cout << ">";
+               break;
+         }
+      }
+   }
+}
+
+void inicializaMatrizMovimientos() 
+{
+   for (int i = 0; i < FILAS_MAPA; ++i) {
+      for (int j = 0; j < COLUMNAS_MAPA; ++j) {
+         matriz_movimientos[i][j] = DIRECCION_INVALIDA;
+
+  }
+   }
+}
+
